@@ -1,24 +1,22 @@
- const CHECK_STATUS = 'CHECK_STATUS';
+const CHECK_STATUS = 'CHECK_STATUS';
 
- initialState = [];
+const initialState = [];
 
- export const checkStatus = () =>{
-    return { 
-        type: CHECK_STATUS,
-        text: ''
-    }
- }
+export const checkStatus = () => ({
+  type: CHECK_STATUS,
+  text: '',
+});
 
- export const statusReducer = (state = initialState, action)=>{
-    switch (action.type){
-        case CHECK_STATUS:
-            return {
-                text: 'Under Construction'
-            }
-        
-        default:
-            return state
-    }
- }
+const statusReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case CHECK_STATUS:
+      return {
+        text: 'Under Construction',
+      };
 
- export default statusReducer;
+    default:
+      return state;
+  }
+};
+
+export default statusReducer;
