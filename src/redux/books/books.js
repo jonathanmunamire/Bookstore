@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 
@@ -18,11 +20,10 @@ const initialState = [
     author: 'Victor Hugo',
   },
 ];
-const bookId = 3;
 
 export const addBook = (title, author) => ({
   type: ADD_BOOK,
-  id: bookId + 1,
+  id: uuidv4(),
   title,
   author,
 });
