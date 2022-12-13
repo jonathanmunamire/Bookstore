@@ -1,7 +1,23 @@
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 
-const initialState = [];
+const initialState = [
+  {
+    id: 1,
+    title: 'Harry Potter',
+    author: 'J.K. Rowling'
+  },
+  {
+    id: 2,
+    title: 'Ice and Fire',
+    author: 'R.R. Martin'
+  },
+  {
+    id: 3,
+    title: 'Les Miserables',
+    author: 'Victor Hugo'
+  }
+];
 const bookId = 0;
 
 export const addBook = (title, author) => ({
