@@ -11,7 +11,7 @@ const Form = () => {
     <form>
       <input type="text" placeholder="book title" ref={abc} />
       <input type="text" placeholder="author name" ref={def} />
-      <button type="button" onClick={() => dispatch(addBook(abc.current.value, def.current.value))}>Add Book</button>
+      <button type="button" onClick={() => { dispatch(addBook(abc.current.value, def.current.value)); abc.current.value = ''; def.current.value = ''; }}>Add Book</button>
     </form>
   );
 };
