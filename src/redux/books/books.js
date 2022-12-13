@@ -5,18 +5,18 @@ const initialState = [
   {
     id: 1,
     title: 'Harry Potter',
-    author: 'J.K. Rowling'
+    author: 'J.K. Rowling',
   },
   {
     id: 2,
     title: 'Ice and Fire',
-    author: 'R.R. Martin'
+    author: 'R.R. Martin',
   },
   {
     id: 3,
     title: 'Les Miserables',
-    author: 'Victor Hugo'
-  }
+    author: 'Victor Hugo',
+  },
 ];
 const bookId = 0;
 

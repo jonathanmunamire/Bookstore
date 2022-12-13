@@ -1,14 +1,14 @@
+import { useSelector } from 'react-redux';
 import React from 'react';
 import Form from './form';
 import Book from './book';
 
 const Books = () => {
-  const name = 'Harry Potter';
-  const author = 'J.K Rowling';
+  const booksArray = useSelector((state) => state);
   return (
     <div>
       <div>
-        <Book name={name} author={author} />
+        <Book arr={booksArray} />
         <button type="button">Delete All</button>
       </div>
       <Form />
