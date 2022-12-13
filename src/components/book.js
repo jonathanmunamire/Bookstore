@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = (props) => {
-  const { name, author } = props;
+  const { title, author } = props;
   return (
     <div>
       <div>
-        {name}
+        {title}
         {' '}
         by
         {' '}
@@ -18,7 +18,7 @@ const Book = (props) => {
 };
 
 Book.propTypes = {
-  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
 };
 export default Book;

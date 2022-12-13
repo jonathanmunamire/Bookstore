@@ -4,11 +4,19 @@ import Form from './form';
 import Book from './book';
 
 const Books = () => {
-  const booksArray = useSelector((state) => state);
+  const booksArray = useSelector((state) => state.bookReducer);
+
   return (
     <div>
       <div>
-        <Book arr={booksArray} />
+        {booksArray.map((book) => (
+          <Book
+            key={book.id}
+            id={book.id}
+            title={book.title}
+            author={book.author}
+          />
+        ))}
         <button type="button">Delete All</button>
       </div>
       <Form />
