@@ -1,12 +1,29 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 
-const initialState = [];
-const bookId = 0;
+const initialState = [
+  {
+    id: 1,
+    title: 'Harry Potter',
+    author: 'J.K. Rowling',
+  },
+  {
+    id: 2,
+    title: 'Ice and Fire',
+    author: 'R.R. Martin',
+  },
+  {
+    id: 3,
+    title: 'Les Miserables',
+    author: 'Victor Hugo',
+  },
+];
 
 export const addBook = (title, author) => ({
   type: ADD_BOOK,
-  id: bookId + 1,
+  id: uuidv4(),
   title,
   author,
 });
@@ -23,13 +40,13 @@ const bookReducer = (state = initialState, action) => {
         ...state,
         {
           id: action.id,
-          title: action.input,
+          title: action.title,
           author: action.author,
         },
       ];
 
     case REMOVE_BOOK:
-      return state.map((book) => (book.id !== action.id));
+      return state.filter((book) => (book.id !== action.id));
 
     default:
       return state;

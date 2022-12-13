@@ -4,15 +4,18 @@ const initialState = [];
 
 export const checkStatus = () => ({
   type: CHECK_STATUS,
-  text: '',
+  payload: '',
 });
 
 const statusReducer = (state = initialState, action) => {
   switch (action.type) {
     case CHECK_STATUS:
-      return {
-        text: 'Under Construction',
-      };
+      return [
+        ...state,
+        {
+          payload: 'Under Construction',
+        },
+      ];
 
     default:
       return state;
