@@ -1,10 +1,10 @@
-import { useSelector } from 'react-redux';
+import { shallowEqual, useSelector } from 'react-redux';
 import React from 'react';
 import Form from './form';
 import Book from './book';
 
 const Books = () => {
-  const booksArray = useSelector((state) => state.bookReducer);
+  const booksArray = useSelector((reducer) => reducer.bookReducer, shallowEqual);
 
   return (
     <div>

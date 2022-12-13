@@ -18,7 +18,7 @@ const initialState = [
     author: 'Victor Hugo',
   },
 ];
-const bookId = 0;
+const bookId = 3;
 
 export const addBook = (title, author) => ({
   type: ADD_BOOK,
@@ -39,13 +39,13 @@ const bookReducer = (state = initialState, action) => {
         ...state,
         {
           id: action.id,
-          title: action.input,
+          title: action.title,
           author: action.author,
         },
       ];
 
     case REMOVE_BOOK:
-      return state.map((book) => (book.id !== action.id));
+      return state.filter((book) => (book.id !== action.id));
 
     default:
       return state;
