@@ -1,56 +1,66 @@
-import { v4 as uuidv4 } from 'uuid';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const ADD_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
+// ACTIONS
+const REMOVE__BOOK = 'bookstore/src/redux/book/REMOVE__BOOK';
+const ADD__BOOK = 'bookstore/src/redux/book/ADD__BOOK';
+const GET_BOOK = 'bookstore/src/redux/GET_BOOK';
 
-const initialState = [
-  {
-    id: 1,
-    title: 'Harry Potter',
-    author: 'J.K. Rowling',
-  },
-  {
-    id: 2,
-    title: 'Ice and Fire',
-    author: 'R.R. Martin',
-  },
-  {
-    id: 3,
-    title: 'Les Miserables',
-    author: 'Victor Hugo',
-  },
-];
+// API LINK
+const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/uvLOuC15kCPrw7OD1Uw9/books';
 
-export const addBook = (title, author) => ({
-  type: ADD_BOOK,
-  id: uuidv4(),
-  title,
-  author,
-});
+// DEFAULT BOOKS
 
-export const removeBook = (id) => ({
-  type: REMOVE_BOOK,
-  id,
-});
-
-const bookReducer = (state = initialState, action) => {
+const displayBooks = [];
+// REDUCERS
+const bookReducer = (state = displayBooks, action) => {
   switch (action.type) {
-    case ADD_BOOK:
-      return [
-        ...state,
-        {
-          id: action.id,
-          title: action.title,
-          author: action.author,
-        },
-      ];
-
-    case REMOVE_BOOK:
-      return state.filter((book) => (book.id !== action.id));
-
+    case GET_BOOK:
+      return action.unique;
+    case REMOVE__BOOK:
+      return state.filter((book) => book.item_id !== action.unique.id);
+    case ADD__BOOK:
+      return [...state, action.item];
     default:
       return state;
   }
 };
 
+// ACTIONS CREATORS
+
+export const getBooks = createAsyncThunk(GET_BOOK, async (post, { dispatch }) => {
+  const response = await fetch(URL);
+  const data = await response.json();
+  const books = Object.keys(data).map((key) => ({
+    ...data[key][0],
+    item_id: key,
+  }));
+  dispatch({
+    type: GET_BOOK,
+    unique: books,
+  });
+});
+
+const addBook = createAsyncThunk(ADD__BOOK, async (book, { dispatch }) => {
+  await fetch(URL, {
+    method: 'POST',
+    headers: { 'Content-type': 'application/json' },
+    body: JSON.stringify(book),
+  });
+  dispatch({
+    type: ADD__BOOK,
+    item: book,
+  });
+});
+
+const removeBook = createAsyncThunk(REMOVE__BOOK, async (id, { dispatch }) => {
+  await fetch(`${URL}/${id}`, {
+    method: 'DELETE',
+  });
+  dispatch({
+    type: REMOVE__BOOK,
+    unique: { id },
+  });
+});
+
 export default bookReducer;
+export { removeBook, addBook };

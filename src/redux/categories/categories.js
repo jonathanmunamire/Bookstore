@@ -1,25 +1,20 @@
+// ACTIONS
 const CHECK_STATUS = 'CHECK_STATUS';
 
-const initialState = [];
-
-export const checkStatus = () => ({
-  type: CHECK_STATUS,
-  payload: '',
-});
-
-const statusReducer = (state = initialState, action) => {
+// REDUCERS
+const categories = (state = [], action) => {
   switch (action.type) {
     case CHECK_STATUS:
-      return [
-        ...state,
-        {
-          payload: 'Under Construction',
-        },
-      ];
-
+      return 'UNDER CONSTRUCTION';
     default:
       return state;
   }
 };
 
-export default statusReducer;
+// ACTION CREATORS
+const category = () => ({
+  type: CHECK_STATUS,
+});
+
+export default categories;
+export { category };
