@@ -1,4 +1,8 @@
-body {
-  padding: 4%;
-  background-color: rgb(238, 238, 238);
+body {  
+  background-color: #f5f6fa;
+}
+
+.body {
+  margin: 4%;
+  box-shadow: 10px 10px 30px rgb(221, 221, 221);
 }
