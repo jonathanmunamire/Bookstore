@@ -37,10 +37,11 @@ const Book = ({
               <p className="completed">Completed</p>
             </div>
           </div>
+          <div className="vertical-line-two" />
           <div className="section-three">
-            <p>CURRENT CHAPTER</p>
-            <p>Chapter 17</p>
-            <button type="button">UPDATE PROGRESS</button>
+            <p className="chapter-text">CURRENT CHAPTER</p>
+            <p className="chapter-number">Chapter 17</p>
+            <button className="update-button" type="button">UPDATE PROGRESS</button>
           </div>
         </div>
       </div>

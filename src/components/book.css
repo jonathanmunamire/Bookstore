@@ -6,7 +6,7 @@
     display: flex;
     justify-content: space-between;
     border: 1px solid rgb(224, 224, 224);
-    padding: 2% 5% 2% 2.5%;
+    padding: 2.5% 5% 2.5% 2.5%;
     margin-bottom: 1rem;
 }
 
@@ -64,11 +64,13 @@
 
 .section-two-three {
     display: flex;
+    align-items: center;
     gap: 3rem;
 }
 
 .section-two {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
@@ -81,10 +83,16 @@
     transform: rotate(45deg);
 }
 
+.two-two {
+    display: flex;
+    flex-direction: column;
+}
+
 .percentage {
     font-family: "Montserrat",sans-serif;
     color: #121212;
     font-size: 2rem;
+    margin: 0;
 }
 
 .completed {
@@ -92,4 +100,48 @@
     color: #121212;
     font-size: .875rem;
     opacity: .5;
+    margin: 0;
+}
+
+.vertical-line-two {
+    width: 0.125rem;
+    height: 4.375rem;
+    margin: 0 1rem 0 2.5rem;
+    background-color: #e8e8e8;
+}
+
+.section-three {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.chapter-text {
+    font-family: "Roboto Slab",serif;
+    font-weight: 300;
+    color: #121212;
+    font-size: .813rem;
+    opacity: .5;
+    margin: 0;
+}
+
+.chapter-number {
+    font-family: "Roboto Slab",serif;
+    font-weight: 300;
+    color: #121212;
+    margin-top: 0.438rem;
+    font-size: 1rem;
+    letter-spacing: -.4px;
+}
+
+.update-button {
+    cursor: pointer;
+    border: none;
+    background-color: #0290ff;
+    border-radius: 3px;
+    padding: 8px 24px;
+    font-family: "Roboto Slab",serif;
+    font-weight: 300;
+    letter-spacing: .5px;
+    color: #fff;
 }
