@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     border: 1px solid rgb(224, 224, 224);
+    border-radius: .4rem;
     padding: 2.5% 5% 2.5% 2.5%;
     margin-bottom: 1rem;
 }
