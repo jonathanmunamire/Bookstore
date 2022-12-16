@@ -5,7 +5,7 @@ import Categories from './components/categories';
 import './App.css';
 
 const App = () => (
-  <>
+  <div className="body">
     <Navbar />
 
     <div className="center">
@@ -16,7 +16,7 @@ const App = () => (
         </Routes>
       </div>
     </div>
-  </>
+  </div>
 );
 
 export default App;

@@ -9,8 +9,8 @@ const GET_BOOK = 'bookstore/src/redux/GET_BOOK';
 const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/uvLOuC15kCPrw7OD1Uw9/books';
 
 // DEFAULT BOOKS
-
 const displayBooks = [];
+
 // REDUCERS
 const bookReducer = (state = displayBooks, action) => {
   switch (action.type) {
