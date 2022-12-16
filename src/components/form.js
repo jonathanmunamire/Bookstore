@@ -51,7 +51,7 @@ const Form = () => {
         <Err />
       </div>
       <h1>ADD NEW BOOK</h1>
-      <form onSubmit={addNewBook}>
+      <form className="form" onSubmit={addNewBook}>
         <input type="text" placeholder="Enter Title" onChange={titleInput} value={title} />
         <input type="text" placeholder="Enter Author" onChange={authorInput} value={author} />
         <select name="select" onChange={add}>
