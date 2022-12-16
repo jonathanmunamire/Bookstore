@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
 import { addBook } from '../redux/books/books';
+import './form.css';
 
 const Form = () => {
   const [title, setTitle] = useState('');
@@ -50,12 +51,12 @@ const Form = () => {
       <div>
         <Err />
       </div>
-      <h1>ADD NEW BOOK</h1>
+      <h1 className="form-section-title">ADD NEW BOOK</h1>
       <form className="form" onSubmit={addNewBook}>
-        <input type="text" placeholder="Enter Title" onChange={titleInput} value={title} />
-        <input type="text" placeholder="Enter Author" onChange={authorInput} value={author} />
-        <select name="select" onChange={add}>
-          <option value="categories" selected disabled>categories</option>
+        <input className="form-input" type="text" placeholder="Title" onChange={titleInput} value={title} />
+        <input className="form-input" type="text" placeholder="Author" onChange={authorInput} value={author} />
+        <select className="form-select" name="select" onChange={add}>
+          <option value="categories" selected disabled>Categories</option>
           <option>Fantasy</option>
           <option>Emotional</option>
           <option>Drama</option>
@@ -68,7 +69,7 @@ const Form = () => {
           <option>Crime</option>
           <option>Horror</option>
         </select>
-        <button type="submit" className="btn">Add Book</button>
+        <button className="form-button" type="submit">Add Book</button>
       </form>
     </section>
   );

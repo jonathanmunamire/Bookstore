@@ -1,0 +1,49 @@
+
+.form-section-title {
+    font-family: "Montserrat",sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -.18px;
+    color: #888;
+}
+
+.form-input {
+    font-family: "Montserrat",sans-serif;
+    width: 25%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+    font-size: 1rem;
+    letter-spacing: -.15px;
+    color: #121212;
+    margin-right: 1.5rem;
+}
+
+.form-select {
+    font-family: "Montserrat",sans-serif;
+    width: 20%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+    font-size: 1rem;
+    letter-spacing: -.15px;
+    color: #121212;
+    margin-right: 1.5rem;
+}
+
+.form-button {
+    font-family: "Roboto Slab",serif;
+    cursor: pointer;
+    width: 20%;
+    padding: 12px;
+    border-radius: 3px;
+    background-color: #0290ff;
+    border: none;
+    letter-spacing: .5px;
+    color: #fff;
+    font-size: .813rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}

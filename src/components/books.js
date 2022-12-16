@@ -13,15 +13,18 @@ const Books = () => {
   }, [dispatch]);
   return (
     <div className="books-body">
-      {books.map((book) => (
-        <Book
-          key={book.item_id}
-          id={book.item_id}
-          title={book.title}
-          author={book.author}
-          category={book.category}
-        />
-      ))}
+      <div className="books-section">
+        {books.map((book) => (
+          <Book
+            key={book.item_id}
+            id={book.item_id}
+            title={book.title}
+            author={book.author}
+            category={book.category}
+          />
+        ))}
+      </div>
+      <div className="vertical-line" />
       <Form />
     </div>
   );

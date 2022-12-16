@@ -9,8 +9,8 @@ header {
     text-justify: center;
     padding-left: 4%;
     padding-right: 4%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: .6%;
+    padding-bottom: .6%;
     font-family: 'Montserrat', sans-serif;
     border-bottom: 1px solid rgb(224, 224, 224);
 }
@@ -20,11 +20,12 @@ header {
     gap: 2rem;
 }
 
-h1 {
+.nav-one h1 {
     font-family: "Montserrat",sans-serif;
     font-size: 1.875rem;
     font-weight: 700;
     color: #0290ff;
+    margin-right: 1rem
 }
 
 nav {
