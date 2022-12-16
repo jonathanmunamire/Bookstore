@@ -1,19 +1,22 @@
-import './App.css';
-import { Routes, Route } from 'react-router-dom';
-import NavBar from './components/navbar';
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/navbar';
 import Books from './components/books';
 import Categories from './components/categories';
+import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <NavBar />
-      <Routes>
-        <Route exact path="/" element={<Books />} />
-        <Route path="/categories" element={<Categories />} />
-      </Routes>
+const App = () => (
+  <>
+    <Navbar />
+
+    <div className="center">
+      <div>
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="/categories" element={<Categories />} />
+        </Routes>
+      </div>
     </div>
-  );
-}
+  </>
+);
 
 export default App;

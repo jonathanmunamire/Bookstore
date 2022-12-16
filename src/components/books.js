@@ -1,24 +1,26 @@
-import { shallowEqual, useSelector } from 'react-redux';
-import React from 'react';
-import Form from './form';
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Book from './book';
+import Form from './form';
+import { getBooks } from '../redux/books/books';
 
 const Books = () => {
-  const booksArray = useSelector((reducer) => reducer.bookReducer, shallowEqual);
-
+  const dispatch = useDispatch();
+  const books = useSelector((state) => state.books);
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
   return (
     <div>
-      <div>
-        {booksArray.map((book) => (
-          <Book
-            key={book.id}
-            id={book.id}
-            title={book.title}
-            author={book.author}
-          />
-        ))}
-        <button type="button">Delete All</button>
-      </div>
+      {books.map((book) => (
+        <Book
+          key={book.item_id}
+          id={book.item_id}
+          title={book.title}
+          author={book.author}
+          category={book.category}
+        />
+      ))}
       <Form />
     </div>
   );
