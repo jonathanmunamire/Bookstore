@@ -55,11 +55,11 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 React Template <a name="about-project"></a>
+# 📖 BookStore <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**React Template** is a ...
+**BookStore** is a website that allows a user to display a list of books, add a book and remove a selected book.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -125,7 +125,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd Math-Magician
-  git clone https://github.com/jonathanmunamire/Math-Magician.git
+  git clone https://github.com/jonathanmunamire/Bookstore.git
 ```
 
 ### Install
