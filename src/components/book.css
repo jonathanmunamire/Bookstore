@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+.single-book {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgb(224, 224, 224);
+    padding: 2% 5% 2% 2.5%;
+    margin-bottom: 1rem;
+}
+
+.section-one {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.p {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.category {
+    font-size: .9rem;
+    font-weight: 700;
+    color: gray;
+    margin-bottom: 2%;
+}
+
+.title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+}
+
+.author {
+    font-size: .875rem;
+    font-weight: lighter;
+    color: #4386bf;
+    font-family: 'Roboto Slab', serif;
+}
+
+.one-two {
+    display: flex;
+}
+
+.one-two button {
+    background-color: #fff;
+    border: none;
+    font-size: .875rem;
+    font-weight: lighter;
+    color: #4386bf;
+    font-family: 'Roboto Slab', serif;
+    padding: 0;
+}
+
+.vertical-line-one {
+    width: 0.125rem;
+    height: 1.5rem;
+    background-color: #e8e8e8;
+    margin: 0 1rem;
+}
+
+.section-two-three {
+    display: flex;
+    gap: 3rem;
+}
+
+.section-two {
+    display: flex;
+    gap: 1rem;
+}
+
+.round {
+    border-radius: 50%;
+    width: 4.25rem;
+    height: 4.25rem;
+    border: 5px solid #307bbe;
+    border-left: 5px solid #f7f5f5;
+    transform: rotate(45deg);
+}
+
+.percentage {
+    font-family: "Montserrat",sans-serif;
+    color: #121212;
+    font-size: 2rem;
+}
+
+.completed {
+    font-family: "Montserrat",sans-serif;
+    color: #121212;
+    font-size: .875rem;
+    opacity: .5;
+}
