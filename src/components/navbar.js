@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
+import { FaUserAlt } from 'react-icons/fa';
 
 const NavBar = () => (
   <header>
@@ -12,7 +13,7 @@ const NavBar = () => (
       </nav>
     </div>
     <div className="nav-two">
-      <button type="button">icon</button>
+      <FaUserAlt className="icon">icon</FaUserAlt>
     </div>
 
   </header>
